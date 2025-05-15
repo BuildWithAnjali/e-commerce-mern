@@ -15,7 +15,7 @@ export const addNewProduct = createAsyncThunk(
   "/products/addnewproduct",
   async (formData) => {
     const result = await axios.post(
-      "https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/add",
+      "https://e-commerce-mern-backend-pelv.onrender.com/api/admin/products/add",
       formData,
       {
         headers: {
@@ -34,7 +34,7 @@ export const fetchAllProducts = createAsyncThunk(
   "/products/fetchAllProducts",
   async () => {
     const result = await axios.get(
-      "https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/get"
+      "https://e-commerce-mern-backend-pelv.onrender.com/api/admin/products/get"
     );
 console.log(result);
 
@@ -49,7 +49,7 @@ export const editProduct = createAsyncThunk(
   "/products/editProduct",
   async ({ id, formData }) => {
     const result = await axios.put(
-      `https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/edit/${id}`,
+      `https://e-commerce-mern-backend-pelv.onrender.com/api/admin/products/edit/${id}`,
       formData,
       {
         headers: {
@@ -69,7 +69,7 @@ export const deleteProduct = createAsyncThunk(
   "/products/deleteProduct",
   async (id) => {
     const result = await axios.delete(
-      `https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/delete/${id}`
+      `https://e-commerce-mern-backend-pelv.onrender.com/api/admin/products/delete/${id}`
     );
 
     return result?.data;
