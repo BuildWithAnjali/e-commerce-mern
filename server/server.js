@@ -17,21 +17,21 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 mongoose.connect('mongodb+srv://anjalivaishnav2000:e9OrEu7knWdLmYbk@cluster0.8slvoaf.mongodb.net/').then(()=>console.log('mongoDB connected')).catch((error)=>console.log(error));
 const app = express()
 const PORT = process.env.PORT || 5000;
-
 app.use(
-    cors({
-      origin: "http://localhost:5173",
-      methods: ["GET", "POST", "DELETE", "PUT"],
-      allowedHeaders: [
-        "Content-Type",
-        "Authorization",
-        "Cache-Control",
-        "Expires",
-        "Pragma",
-      ],
-      credentials: true,
-    })
-  );
+  cors({
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST", "DELETE", "PUT"],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+      "Cache-Control",
+      "Expires",
+      "Pragma",
+    ],
+    credentials: true,
+  })
+);
+
 app.use(cookieParser());
 app.use(express.json());
 app.use('/api/auth', authRouter);

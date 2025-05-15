@@ -7,6 +7,7 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { Card, CardContent } from "@/components/components/ui/card"
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { addToCart, fetchCartItems } from "@/store/shop/cart-slice";
 import {
     Airplay,
     BabyIcon,

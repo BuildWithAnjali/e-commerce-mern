@@ -22,7 +22,7 @@ import { Badge } from "../components/ui/badge";
 
 function AdminOrdersView() {
   const [openDetailsDialog, setOpenDetailsDialog] = useState(false);
-  // const { orderList, orderDetails } = useSelector((state) => state.adminOrder);
+  // const { orderList, orderDetails } = useSelector((state) => state.orderList);
   const { orderList, orderDetails } = useSelector((state) => state.adminOrder || {});
 
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ function AdminOrdersView() {
     dispatch(getAllOrdersForAdmin());
   }, [dispatch]);
 
-  console.log(orderDetails, "orderList");
+  // console.log(orderList, "orderList");
 
   useEffect(() => {
     if (orderDetails !== null) setOpenDetailsDialog(true);
