@@ -53,7 +53,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/upload-image",
+      "https://e-commerce-mern-backend-pelv.onrender.com/api/admin/products/upload-image",
       data
     );
     console.log(response, "response");
