@@ -1,76 +1,5 @@
 
 
-// import { UploadCloudIcon } from "lucide-react";
-// import { Input } from "../components/ui/input";
-// import { Label } from "../components/ui/label";
-// import { useReducer, useRef } from "react";
-
-// function ProductImageUpload(
-//   imageFile,
-//   setImageFile,
-//   uploadedImageUrl,
-//   setUploadedImageUrl
-// ) {
-//   const inputRef = useRef(null);
-
-//   function handleImageFileChange(event) {
-//     console.log(event.target.files);
-//     const selectedFile = event.target.files?.[0];
-//     if(selectedFile) setImageFile(selectedFile);
-//   }
-
-//  function handleDragOver(event){
-//     event.preventDefault()
-//  }
-
-
-//  function handleDrop(event){
-//     event.preventDefault()
-//     const droppedFile = event.dataTransfer.files?.[0];
-//     if(droppedFile) setImageFile (droppedFile);
-//  }
-
-
-
-
-//   return (
-//     <div className="w-full max-w-md mx-auto h-auto">
-//       <Label className="text-lg font-semibold mb-2 block">Upload Image</Label>
-//       <div onDragOver={handleDragOver} onDrop={handleDrop} className="border-2 border-dashed rounded-lg p-4">
-//         <Input
-//           id="image-upload"
-//           type="file"
-//         //   className="hidden"
-//           ref={inputRef}
-//           onChange={handleImageFileChange}
-//         />
-
-
-
-//         {/* getting problem in this */}
-//          {
-          
-          
-//        !imageFile ?(<Label htmlFor="image-upload" className="flex flex-col items-center justify-center h-32 cursor-pointer">
-//         <UploadCloudIcon className="w-10 h-10 text-muted-foreground mb-2"/>
-//         <span>Drag & Drop or Click to upload image</span>
-
-//       </Label> )
-//            : (<div className="flex  items-center justify-between">
-//             <div></div>
-//            </div>)
-//         } 
-      
-//         {/* getting problem in this */}
-//       </div>
-//     </div>
-//   );
-// }
-// export default ProductImageUpload;
-
-
-
-
 
 import { FileIcon, UploadCloudIcon, XIcon } from "lucide-react";
 import { Input } from "../components/ui/input";
@@ -124,7 +53,7 @@ function ProductImageUpload({
     const data = new FormData();
     data.append("my_file", imageFile);
     const response = await axios.post(
-      "http://localhost:5000/api/admin/products/upload-image",
+      "https://e-commerce-mern-1-q2v8.onrender.com/api/admin/products/upload-image",
       data
     );
     console.log(response, "response");
