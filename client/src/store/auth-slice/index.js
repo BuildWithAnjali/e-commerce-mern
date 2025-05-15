@@ -62,7 +62,7 @@ export const checkAuth = createAsyncThunk(
 
   async () => {
     const response = await axios.get(
-      "https://e-commerce-mern-1-q2v8.onrender.com/api/auth/check-auth",
+      "https://e-commerce-mern-backend-pelv.onrender.com/api/auth/check-auth",
       {
         withCredentials: true,
         headers: {
